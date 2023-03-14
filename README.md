@@ -1,13 +1,14 @@
 # Hygieia
 
-How to start the Hygieia application
----
+## Say Hello SOAP Web Service
 
-1. Run `mvn clean install` to build your application
-1. Start application with `java -jar target/hygieia-1.0-SNAPSHOT.jar server config.yml`
-1. To check that your application is running enter url `http://localhost:8080`
+The web service exposed here is ```/soap/hello```  and is created using SOAP 1.1
+To access this web service start the dropwizard server on localhost and hit the below api
 
-Health Check
----
+```
+http://localhost:8080/soap/hello?WSDL
+```
 
-To see your applications health enter url `http://localhost:8081/healthcheck`
+The above endpopint gives the WSDL XML web service definition file.
+Import the XML content rendered on above page into postman via RAW text.
+Or you can import via link (in postman) and past the above localhost link into it. 
