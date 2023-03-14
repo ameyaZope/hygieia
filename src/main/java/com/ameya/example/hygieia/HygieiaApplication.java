@@ -1,6 +1,6 @@
 package com.ameya.example.hygieia;
 
-import com.ameya.example.hygieia.resources.HelloWorldSoap;
+import com.ameya.example.hygieia.resources.HelloWorldSoapService;
 import com.roskart.dropwizard.jaxws.EndpointBuilder;
 import com.roskart.dropwizard.jaxws.JAXWSBundle;
 import io.dropwizard.Application;
@@ -29,7 +29,7 @@ public class HygieiaApplication extends Application<HygieiaConfiguration> {
     public void run(final HygieiaConfiguration configuration,
                     final Environment environment) {
         jaxWsBundle.publishEndpoint(
-                new EndpointBuilder("/hello", new HelloWorldSoap()));
+                new EndpointBuilder("/hello", new HelloWorldSoapService()));
     }
 
 }
